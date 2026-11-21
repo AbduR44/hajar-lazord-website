@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة حجر لازوردي للاستثمار السياحي | مصراتة - ليبيا</title>
+    <link rel="icon" href="hajar-lazorde-logo.webp" type="image/webp">
+    <meta name="description"
+        content="الموقع الرسمي لشركة حجر لازوردي للاستثمار السياحي في مدينة مصراتة، ليبيا. صالة متكاملة لاستضافة حفلات الزفاف والخطوبة، التخرج، المؤتمرات، المحاضرات الثقافية والندوات.">
+
+    <!-- Google Fonts: Amiri for official regal typography, Cairo for crisp corporate UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lapis: {
+                            950: '#060F1E',
+                            900: '#0B1D3A',
+                            800: '#10284F',
+                            700: '#153466',
+                            600: '#1E4687',
+                        },
+                        gold: {
+                            200: '#F7EBC6',
+                            300: '#F2DFA8',
+                            400: '#E5C77B',
+                            500: '#C9A24B',
+                            600: '#A88332',
+                            700: '#856522',
+                        },
+                        ivory: {
+                            50: '#FDFCFA',
+                            100: '#FAF8F5',
+                            200: '#F2EDE4',
+                            300: '#E6DEC8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                        serif: ['Amiri', 'serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 10px 35px -5px rgba(201, 162, 75, 0.25)',
+                        'lapis-card': '0 20px 50px -12px rgba(11, 29, 58, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FAF8F5;
+            color: #1E242B;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Amiri', serif;
+        }
+
+        /* Subtle Lapis & Gold Geometric Lattice Pattern */
+        .bg-arabesque-dark {
+            background-color: #0B1D3A;
+            background-image:
+                radial-gradient(circle at 20% 25%, rgba(201, 162, 75, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 80% 75%, rgba(30, 70, 135, 0.35) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A24B' stroke-width='0.6' stroke-opacity='0.11'%3E%3Cpath d='M40 0L51.7 28.3L80 40L51.7 51.7L40 80L28.3 51.7L0 40L28.3 28.3Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M0 0L80 80M80 0L0 80' stroke-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .bg-arabesque-light {
+            background-color: #FAF8F5;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A24B' stroke-width='0.6' stroke-opacity='0.09'%3E%3Cpath d='M40 0L51.7 28.3L80 40L51.7 51.7L40 80L28.3 51.7L0 40L28.3 28.3Z'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Metallic Gold Gradient Text & Buttons */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F2DFA8 0%, #C9A24B 50%, #E5C77B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gold-luxury {
+            background: linear-gradient(135deg, #D8B45C 0%, #C9A24B 50%, #B08A38 100%);
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .btn-gold-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px -6px rgba(201, 162, 75, 0.45);
+            filter: brightness(1.06);
+        }
+
+        .arch-frame {
+            border-radius: 9999px 9999px 1.5rem 1.5rem;
+        }
+
+        /* Multi-Page View Transitions */
+        .page-view {
+            display: none;
+            animation: pageFadeIn 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .page-view.active-page {
+            display: block;
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Active Navigation Tab Indicator */
+        .nav-link-item {
+            position: relative;
+        }
+
+        .nav-link-item.active {
+            color: #E5C77B;
+            font-weight: 700;
+        }
+
+        .nav-link-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #C9A24B, transparent);
+            border-radius: 9999px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0B1D3A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #C9A24B;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-gold-500 selection:text-lapis-900 flex flex-col min-h-screen">
+
+    <!-- ===================================================================== -->
+    <!-- TOP OFFICIAL CORPORATE INFORMATION BAR                                -->
+    <!-- ===================================================================== -->
+    <div class="bg-lapis-950 text-ivory-200 border-b border-gold-500/25 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                <span class="inline-flex items-center gap-1.5 text-gold-300 font-medium">
+                    <svg class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>مصراتة - ليبيا | منطقة الرويسات - الدائري الرابع</span>
+                </span>
+                <span class="hidden md:inline-flex items-center gap-1.5 text-ivory-200/80">
+                    <svg class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>أوقات الاستقبال: يومياً 09:00 صباحاً – 10:00 مساءً</span>
+                </span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:0912112110"
+                    class="inline-flex items-center gap-1.5 text-white hover:text-gold-400 transition font-bold">
+                    <svg class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span dir="ltr">0912112110</span>
+                </a>
+                <span class="text-gold-500/40">|</span>
+                <a href="mailto:lazurdhajar@gmail.com"
+                    class="hidden sm:inline-flex items-center gap-1.5 text-ivory-200/85 hover:text-gold-400 transition">
+                    <span>lazurdhajar@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- STICKY OFFICIAL CORPORATE NAVIGATION HEADER                           -->
+    <!-- ===================================================================== -->
+    <header id="navbar"
+        class="sticky top-0 inset-x-0 z-50 bg-lapis-900/95 backdrop-blur-md border-b border-gold-500/25 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Official Corporate Crest & Title -->
+                <a href="#home" data-page-link="home" class="flex items-center gap-3.5 group focus:outline-none">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-lapis-700 to-lapis-950 border border-gold-500/60 overflow-hidden shadow-gold-glow group-hover:scale-105 transition-transform">
+                        <img src="hajar-lazorde-logo.webp" alt="شعار شركة حجر لازوردي"
+                            class="w-full h-full object-cover object-center rounded-xl">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-xl sm:text-2xl font-bold text-white tracking-wide leading-none">
+                            شركة حجر لازوردي
+                        </span>
+                        <span class="text-[11px] sm:text-xs text-gold-400 font-semibold mt-1">
+                            للاستثمار السياحي • مصراتة
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Multi-Page Navigation Links -->
+                <nav aria-label="القائمة الرئيسية" class="hidden lg:flex items-center gap-7">
+                    <a href="#home" data-page-link="home"
+                        class="nav-link-item active text-sm font-medium text-ivory-100 hover:text-gold-400 transition-colors py-2">الرئيسية</a>
+                    <a href="#about" data-page-link="about"
+                        class="nav-link-item text-sm font-medium text-ivory-100 hover:text-gold-400 transition-colors py-2">من
+                        نحن</a>
+                    <a href="#services" data-page-link="services"
+                        class="nav-link-item text-sm font-medium text-ivory-100 hover:text-gold-400 transition-colors py-2">خدماتنا</a>
+                    <a href="#why-us" data-page-link="why-us"
+                        class="nav-link-item text-sm font-medium text-ivory-100 hover:text-gold-400 transition-colors py-2">لماذا
+                        تختارنا؟</a>
+                    <a href="#contact" data-page-link="contact"
+                        class="nav-link-item text-sm font-medium text-ivory-100 hover:text-gold-400 transition-colors py-2">تواصل
+                        معنا والحجز</a>
+                </nav>
+
+                <!-- Desktop Primary CTA & Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <a href="#contact" data-page-link="contact"
+                        class="hidden sm:inline-flex items-center gap-2 btn-gold-luxury text-lapis-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-md">
+                        <span>احجز مناسبتك الآن</span>
+                        <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+
+                    <!-- Mobile Hamburger Toggle -->
+                    <button id="mobile-menu-btn" type="button" aria-label="فتح القائمة"
+                        class="lg:hidden p-2.5 rounded-xl text-gold-400 hover:bg-lapis-800 border border-gold-500/35 focus:outline-none">
+                        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-lapis-950 border-b border-gold-500/25 px-4 pt-3 pb-6 space-y-1.5">
+            <a href="#home" data-page-link="home"
+                class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-lapis-800 hover:text-gold-400 transition">الرئيسية</a>
+            <a href="#about" data-page-link="about"
+                class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-lapis-800 hover:text-gold-400 transition">من
+                نحن</a>
+            <a href="#services" data-page-link="services"
+                class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-lapis-800 hover:text-gold-400 transition">خدماتنا</a>
+            <a href="#why-us" data-page-link="why-us"
+                class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-lapis-800 hover:text-gold-400 transition">لماذا
+                تختارنا؟</a>
+            <a href="#contact" data-page-link="contact"
+                class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-lapis-800 hover:text-gold-400 transition">تواصل
+                معنا والحجز</a>
+            <div class="pt-3 px-1">
+                <a href="#contact" data-page-link="contact"
+                    class="mobile-nav-link flex items-center justify-center gap-2 w-full btn-gold-luxury text-lapis-950 font-bold py-3.5 rounded-xl">
+                    <span>احجز مناسبتك الآن</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- MAIN MULTI-PAGE ROUTER CONTAINER                                      -->
+    <!-- ===================================================================== -->
+    <main class="flex-grow">
+
+        <!-- ================================================================= -->
+        <!-- PAGE 1: الرئيسية (HOME PAGE)                                      -->
+        <!-- ================================================================= -->
+        <div id="page-home" class="page-view active-page">
+            <!-- Hero Banner -->
+            <section class="relative py-16 sm:py-24 bg-arabesque-dark overflow-hidden">
+                <canvas id="lapis-particles"
+                    class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                        <!-- Right Content Column (7 Cols) -->
+                        <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+                            <!-- Official Entity Badge -->
+                            <div
+                                class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-lapis-800/90 border border-gold-500/40 text-gold-300 text-xs sm:text-sm font-semibold shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+                                <span>البوابة الرسمية • مصراتة - ليبيا</span>
+                            </div>
+
+                            <!-- Main Headline -->
+                            <h1
+                                class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                                شركة حجر لازوردي
+                                <span class="block text-gold-gradient mt-2">للاستثمار السياحي</span>
+                            </h1>
+
+                            <!-- Subheadline -->
+                            <p class="text-xl sm:text-2xl text-gold-300 font-semibold leading-relaxed">
+                                وجهتكم المثالية للمناسبات والاحتفالات المميزة
+                            </p>
+
+                            <!-- Intro Lead & Events Grid -->
+                            <div
+                                class="bg-lapis-950/70 backdrop-blur-md border border-gold-500/30 rounded-2xl p-5 sm:p-6 text-right shadow-xl">
+                                <p class="text-ivory-100 font-bold text-base sm:text-lg mb-4 flex items-center gap-2">
+                                    <span class="w-1.5 h-6 bg-gold-500 rounded-full inline-block"></span>
+                                    نوفر صالة متكاملة لاستضافة:
+                                </p>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base text-ivory-200">
+                                    <li
+                                        class="flex items-center gap-2.5 bg-lapis-800/55 px-3.5 py-2.5 rounded-xl border border-gold-500/15">
+                                        <span class="text-gold-400 font-bold">✦</span>
+                                        <span>حفلات الزفاف والخطوبة</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-2.5 bg-lapis-800/55 px-3.5 py-2.5 rounded-xl border border-gold-500/15">
+                                        <span class="text-gold-400 font-bold">✦</span>
+                                        <span>المناسبات والاحتفالات الاجتماعية</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-2.5 bg-lapis-800/55 px-3.5 py-2.5 rounded-xl border border-gold-500/15">
+                                        <span class="text-gold-400 font-bold">✦</span>
+                                        <span>حفلات التخرج</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-2.5 bg-lapis-800/55 px-3.5 py-2.5 rounded-xl border border-gold-500/15">
+                                        <span class="text-gold-400 font-bold">✦</span>
+                                        <span>المؤتمرات والملتقيات</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-2.5 bg-lapis-800/55 px-3.5 py-2.5 rounded-xl border border-gold-500/15">
+                                        <span class="text-gold-400 font-bold">✦</span>
+                                        <span>المحاضرات الثقافية</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-2.5 bg-lapis-800/55 px-3.5 py-2.5 rounded-xl border border-gold-500/15">
+                                        <span class="text-gold-400 font-bold">✦</span>
+                                        <span>الندوات والفعاليات المختلفة</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Primary & Secondary CTA Buttons -->
+                            <div
+                                class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                                <a href="#contact" data-page-link="contact"
+                                    class="w-full sm:w-auto inline-flex items-center justify-center gap-3 btn-gold-luxury text-lapis-950 font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-gold-glow">
+                                    <span>احجز مناسبتك الآن</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                </a>
+                                <a href="#contact" data-page-link="contact"
+                                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl border-2 border-gold-500/60 text-gold-300 hover:bg-gold-500/15 hover:border-gold-400 font-bold text-base sm:text-lg transition-all">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                    <span>تواصل معنا</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Left Architectural Luxury Showcase Arch (5 Cols) -->
+                        <div class="lg:col-span-5 flex justify-center">
+                            <div class="relative w-full max-w-md">
+                                <div class="absolute -inset-3 arch-frame border border-gold-500/35 pointer-events-none">
+                                </div>
+                                <div
+                                    class="relative arch-frame overflow-hidden bg-gradient-to-b from-lapis-700 via-lapis-800 to-lapis-950 border-2 border-gold-500/55 p-8 sm:p-10 text-center shadow-2xl">
+                                    <div
+                                        class="mx-auto w-24 h-24 rounded-full bg-lapis-950/85 border border-gold-500/45 overflow-hidden mb-6 shadow-gold-glow">
+                                        <img src="hajar-lazorde-logo.webp" alt="شعار قاعة حجر لازوردي"
+                                            class="w-full h-full object-cover object-center rounded-full">
+                                    </div>
+
+                                    <span class="text-xs tracking-wider text-gold-400 font-bold">صرح الضيافة
+                                        والفعاليات</span>
+                                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-2 mb-3">
+                                        قاعة حجر لازوردي
+                                    </h2>
+                                    <p class="text-sm text-ivory-200/90 leading-relaxed mb-6">
+                                        مساحات مريحة وتجهيزات حديثة تضمن نجاح جميع المناسبات الاجتماعية والثقافية
+                                        والعلمية في قلب مصراتة.
+                                    </p>
+
+                                    <div class="grid grid-cols-3 gap-2 pt-5 border-t border-gold-500/25 text-center">
+                                        <div class="p-2">
+                                            <div class="font-display text-lg font-bold text-gold-400">متكاملة</div>
+                                            <div class="text-[11px] text-ivory-200 mt-0.5">تجهيزات حديثة</div>
+                                        </div>
+                                        <div class="p-2 border-x border-gold-500/20">
+                                            <div class="font-display text-lg font-bold text-gold-400">الدائري الرابع
+                                            </div>
+                                            <div class="text-[11px] text-ivory-200 mt-0.5">موقع حيوي</div>
+                                        </div>
+                                        <div class="p-2">
+                                            <div class="font-display text-lg font-bold text-gold-400">احترافية</div>
+                                            <div class="text-[11px] text-ivory-200 mt-0.5">إدارة وتنظيم</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Corporate Portal Directory Cards (Navigate directly to dedicated pages) -->
+            <section class="py-16 sm:py-20 bg-arabesque-light">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-xs font-bold text-gold-600 tracking-wider">أقسام البوابة الرسمية</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-lapis-900 mt-1">
+                            استكشف مرافق وخدمات الشركة
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                        <!-- Card 1 -> About Page -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-display text-2xl font-bold text-lapis-900 mb-3">من نحن</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    تعرف على رؤية ورسالة شركة حجر لازوردي للاستثمار السياحي ومعايير الضيافة التي نقدمها
+                                    للأفراد والمؤسسات في مصراتة.
+                                </p>
+                            </div>
+                            <a href="#about" data-page-link="about"
+                                class="inline-flex items-center gap-2 text-sm font-bold text-lapis-900 hover:text-gold-600 transition">
+                                <span>الانتقال إلى صفحة من نحن</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Card 2 -> Services Page -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-display text-2xl font-bold text-lapis-900 mb-3">خدماتنا</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    استعرض تفاصيل تنظيم حفلات الزفاف والتخرج، المؤتمرات والملتقيات، المحاضرات الثقافية،
+                                    والندوات وورش العمل.
+                                </p>
+                            </div>
+                            <a href="#services" data-page-link="services"
+                                class="inline-flex items-center gap-2 text-sm font-bold text-lapis-900 hover:text-gold-600 transition">
+                                <span>الانتقال إلى صفحة خدماتنا</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Card 3 -> Why Us Page -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-display text-2xl font-bold text-lapis-900 mb-3">لماذا تختارنا؟</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    تعرف على مزايا الموقع الاستراتيجي في منطقة الرويسات، سعة القاعة، الأسعار المناسبة،
+                                    وفريق خدمة العملاء.
+                                </p>
+                            </div>
+                            <a href="#why-us" data-page-link="why-us"
+                                class="inline-flex items-center gap-2 text-sm font-bold text-lapis-900 hover:text-gold-600 transition">
+                                <span>الانتقال إلى صفحة لماذا تختارنا؟</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 2: من نحن (ABOUT US PAGE)                                    -->
+        <!-- ================================================================= -->
+        <div id="page-about" class="page-view">
+            <!-- Official Sub-Page Header & Breadcrumb -->
+            <div class="bg-arabesque-dark text-white py-14 border-b border-gold-500/30">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav aria-label="مسار التنقل" class="flex items-center gap-2 text-xs sm:text-sm text-gold-300 mb-4">
+                        <a href="#home" data-page-link="home" class="hover:underline">الرئيسية</a>
+                        <span>/</span>
+                        <span class="text-white font-bold">من نحن</span>
+                    </nav>
+                    <h1 class="font-display text-3xl sm:text-5xl font-bold text-white">
+                        من نحن
+                    </h1>
+                    <p class="text-gold-300 text-base sm:text-lg mt-2">
+                        شركة حجر لازوردي للاستثمار السياحي — مصراتة، ليبيا
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main About Corporate Profile -->
+            <section class="py-16 sm:py-24 bg-arabesque-light">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <!-- Corporate Statement (7 Cols) -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div
+                                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gold-500/15 border border-gold-500/35 text-gold-700 text-xs font-bold">
+                                نبذة تعريفية رسمية
+                            </div>
+                            <h2 class="font-display text-3xl sm:text-4xl font-bold text-lapis-900 leading-snug">
+                                شركة حجر لازوردي للاستثمار السياحي
+                            </h2>
+                            <div
+                                class="bg-white p-7 rounded-3xl border-r-4 border-gold-500 shadow-lapis-card space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                                <p>
+                                    نفخر بتقديم خدمات متكاملة لاستضافة وتنظيم المناسبات والفعاليات المختلفة في مدينة
+                                    مصراتة. تتميز صالتنا بمساحات مريحة وتجهيزات حديثة تضمن نجاح جميع المناسبات
+                                    الاجتماعية والثقافية والعلمية.
+                                </p>
+                                <p class="text-lapis-900 font-semibold">
+                                    نسعى لتوفير بيئة راقية وخدمة متميزة تلبي احتياجات الأفراد والمؤسسات وتضمن تجربة
+                                    استثنائية لضيوفنا.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-4 pt-2">
+                                <a href="#services" data-page-link="services"
+                                    class="btn-gold-luxury text-lapis-950 font-bold px-7 py-3.5 rounded-xl text-sm sm:text-base shadow-md">
+                                    استعرض خدماتنا المتكاملة
+                                </a>
+                                <a href="#contact" data-page-link="contact"
+                                    class="px-7 py-3.5 rounded-xl bg-lapis-900 text-white hover:bg-lapis-800 font-bold text-sm sm:text-base transition">
+                                    طلب حجز أو معاينة للصالة
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Official Corporate Charter Card (5 Cols) -->
+                        <div class="lg:col-span-5">
+                            <div
+                                class="rounded-3xl bg-lapis-900 text-white p-8 sm:p-10 shadow-lapis-card border border-gold-500/40 relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 left-0 w-36 h-36 bg-gold-500/10 rounded-br-full pointer-events-none">
+                                </div>
+                                <div class="flex items-center gap-3 pb-6 mb-6 border-b border-gold-500/25">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-gold-500/20 border border-gold-500/40 overflow-hidden">
+                                        <img src="hajar-lazorde-logo.webp" alt="شعار شركة حجر لازوردي"
+                                            class="w-full h-full object-cover object-center rounded-xl">
+                                    </div>
+                                    <div>
+                                        <div class="font-display text-xl font-bold text-gold-300">هوية الشركة
+                                            والتزاماتها</div>
+                                        <div class="text-xs text-ivory-200/75">مصراتة - ليبيا</div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-5 text-sm">
+                                    <div class="p-4 rounded-2xl bg-lapis-800/70 border border-gold-500/20">
+                                        <h3 class="font-bold text-gold-400 mb-1">رسالتنا المؤسسية</h3>
+                                        <p class="text-ivory-200 leading-relaxed">
+                                            الارتقاء بمعايير استضافة وتنظيم الفعاليات في مدينة مصراتة عبر توفير مرافق
+                                            متطورة وخدمة ضيافة تليق بضيوفنا.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-lapis-800/70 border border-gold-500/20">
+                                        <h3 class="font-bold text-gold-400 mb-1">نطاق خدماتنا</h3>
+                                        <p class="text-ivory-200 leading-relaxed">
+                                            نخدم شريحتين رئيسيتين: الأفراد والعائلات في مناسباتهم السعيدة، والمؤسسات
+                                            والهيئات الأكاديمية والثقافية في مؤتمراتها وندواتها.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-lapis-800/70 border border-gold-500/20">
+                                        <h3 class="font-bold text-gold-400 mb-1">المقر الرئيسي</h3>
+                                        <p class="text-ivory-200 leading-relaxed">
+                                            مصراتة - ليبيا، منطقة الرويسات - الدائري الرابع - بجوار مصنع الصابون.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facility Infrastructure Pillars -->
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 border border-ivory-300 shadow-sm">
+                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900 mb-6 text-center">
+                            مواصفات وتجهيزات صالة حجر لازوردي
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="p-5 rounded-2xl bg-ivory-100 border border-ivory-300 text-center">
+                                <div class="font-display text-xl font-bold text-lapis-900 mb-2">مساحات مريحة</div>
+                                <p class="text-xs sm:text-sm text-slate-600">توزيع مدروس للمقاعد والطاولات يضمن انسيابية
+                                    الحركة وراحة الحضور.</p>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-ivory-100 border border-ivory-300 text-center">
+                                <div class="font-display text-xl font-bold text-lapis-900 mb-2">أنظمة صوت وإضاءة</div>
+                                <p class="text-xs sm:text-sm text-slate-600">تجهيزات حديثة تلائم أجواء الاحتفالات كما
+                                    تلائم وضوح المؤتمرات والندوات.</p>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-ivory-100 border border-ivory-300 text-center">
+                                <div class="font-display text-xl font-bold text-lapis-900 mb-2">تهيئة شاملة</div>
+                                <p class="text-xs sm:text-sm text-slate-600">تكييف مركزي ومرافق خدمية متكاملة معدة
+                                    لاستقبال كبار الضيوف.</p>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-ivory-100 border border-ivory-300 text-center">
+                                <div class="font-display text-xl font-bold text-lapis-900 mb-2">مواقف ميسرة</div>
+                                <p class="text-xs sm:text-sm text-slate-600">موقع مباشر على الدائري الرابع يتيح سهولة
+                                    الوصول ووقوف السيارات.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 3: خدماتنا (SERVICES PAGE)                                   -->
+        <!-- ================================================================= -->
+        <div id="page-services" class="page-view">
+            <!-- Official Sub-Page Header & Breadcrumb -->
+            <div class="bg-arabesque-dark text-white py-14 border-b border-gold-500/30">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav aria-label="مسار التنقل" class="flex items-center gap-2 text-xs sm:text-sm text-gold-300 mb-4">
+                        <a href="#home" data-page-link="home" class="hover:underline">الرئيسية</a>
+                        <span>/</span>
+                        <span class="text-white font-bold">خدماتنا</span>
+                    </nav>
+                    <h1 class="font-display text-3xl sm:text-5xl font-bold text-white">
+                        خدماتنا
+                    </h1>
+                    <p class="text-gold-300 text-base sm:text-lg mt-2">
+                        حلول متكاملة لاستضافة وتنظيم كافة المناسبات الاجتماعية، الأكاديمية، والرسمية
+                    </p>
+                </div>
+            </div>
+
+            <!-- Detailed Services Catalog -->
+            <section class="py-16 sm:py-24 bg-arabesque-light">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+                    <!-- Service 1 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 sm:p-9 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8 flex flex-col sm:flex-row items-start gap-5">
+                            <div
+                                class="w-16 h-16 shrink-0 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center shadow-md">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold text-gold-600">01 • المناسبات الخاصة والعائلية</span>
+                                <h2 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900">
+                                    حفلات ومناسبات اجتماعية
+                                </h2>
+                                <p class="text-slate-600 text-base leading-relaxed">
+                                    تنظيم حفلات الزفاف، الخطوبة، أعياد الميلاد والمناسبات العائلية.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 text-xs text-lapis-900 font-semibold">
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">تنسيق القاعة والضيافة</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">إضاءة احتفالية</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">خصوصية وراحة تامة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 flex lg:justify-end">
+                            <button type="button" onclick="bookSpecificService('حفلات ومناسبات اجتماعية')"
+                                class="w-full sm:w-auto btn-gold-luxury text-lapis-950 font-bold px-6 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <span>احجز هذه الخدمة</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 sm:p-9 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8 flex flex-col sm:flex-row items-start gap-5">
+                            <div
+                                class="w-16 h-16 shrink-0 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center shadow-md">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M12 14l9-5-9-5-9 5 9 5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M12 14v7" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold text-gold-600">02 • الاحتفالات الأكاديمية
+                                    والطلابية</span>
+                                <h2 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900">
+                                    حفلات التخرج
+                                </h2>
+                                <p class="text-slate-600 text-base leading-relaxed">
+                                    قاعات مجهزة للاحتفال بالنجاح والتميز في أجواء مميزة.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 text-xs text-lapis-900 font-semibold">
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">منصة تكريم مجهزة</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">نظام صوتي متكامل</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">استقبال الخريجين والأهالي</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 flex lg:justify-end">
+                            <button type="button" onclick="bookSpecificService('حفلات التخرج')"
+                                class="w-full sm:w-auto btn-gold-luxury text-lapis-950 font-bold px-6 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <span>احجز هذه الخدمة</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 sm:p-9 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8 flex flex-col sm:flex-row items-start gap-5">
+                            <div
+                                class="w-16 h-16 shrink-0 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center shadow-md">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold text-gold-600">03 • الفعاليات الرسمية والمؤسسية</span>
+                                <h2 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900">
+                                    المؤتمرات والملتقيات
+                                </h2>
+                                <p class="text-slate-600 text-base leading-relaxed">
+                                    استضافة المؤتمرات والاجتماعات الرسمية بمرافق مناسبة.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 text-xs text-lapis-900 font-semibold">
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">منصة رئيسية للمتحدثين</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">تجهيزات عرض وصوت</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">تنظيم استقبال الوفود</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 flex lg:justify-end">
+                            <button type="button" onclick="bookSpecificService('المؤتمرات والملتقيات')"
+                                class="w-full sm:w-auto btn-gold-luxury text-lapis-950 font-bold px-6 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <span>احجز هذه الخدمة</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 sm:p-9 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8 flex flex-col sm:flex-row items-start gap-5">
+                            <div
+                                class="w-16 h-16 shrink-0 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center shadow-md">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold text-gold-600">04 • الأنشطة الفكرية والمجتمعية</span>
+                                <h2 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900">
+                                    المحاضرات الثقافية
+                                </h2>
+                                <p class="text-slate-600 text-base leading-relaxed">
+                                    بيئة مريحة للمحاضرات والأنشطة الثقافية والتوعوية.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 text-xs text-lapis-900 font-semibold">
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">هدوء وعزل صوتي مناسب</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">مقاعد مريحة للجمهور</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">إضاءة قراءة وعرض واضحة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 flex lg:justify-end">
+                            <button type="button" onclick="bookSpecificService('المحاضرات الثقافية')"
+                                class="w-full sm:w-auto btn-gold-luxury text-lapis-950 font-bold px-6 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <span>احجز هذه الخدمة</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 sm:p-9 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8 flex flex-col sm:flex-row items-start gap-5">
+                            <div
+                                class="w-16 h-16 shrink-0 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center shadow-md">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold text-gold-600">05 • البرامج التدريبية والمهنية</span>
+                                <h2 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900">
+                                    الندوات وورش العمل
+                                </h2>
+                                <p class="text-slate-600 text-base leading-relaxed">
+                                    تجهيزات ملائمة للفعاليات التعليمية والمهنية.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 text-xs text-lapis-900 font-semibold">
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">مرونة ترتيب الطاولات</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">ميكروفونات للحوار التفاعلي</span>
+                                    <span class="px-3 py-1 rounded-full bg-ivory-200">استراحات ضيافة للمشاركين</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 flex lg:justify-end">
+                            <button type="button" onclick="bookSpecificService('الندوات وورش العمل')"
+                                class="w-full sm:w-auto btn-gold-luxury text-lapis-950 font-bold px-6 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <span>احجز هذه الخدمة</span>
+                                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 4: لماذا تختارنا؟ (WHY CHOOSE US PAGE)                       -->
+        <!-- ================================================================= -->
+        <div id="page-why-us" class="page-view">
+            <!-- Official Sub-Page Header & Breadcrumb -->
+            <div class="bg-arabesque-dark text-white py-14 border-b border-gold-500/30">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav aria-label="مسار التنقل" class="flex items-center gap-2 text-xs sm:text-sm text-gold-300 mb-4">
+                        <a href="#home" data-page-link="home" class="hover:underline">الرئيسية</a>
+                        <span>/</span>
+                        <span class="text-white font-bold">لماذا تختارنا؟</span>
+                    </nav>
+                    <h1 class="font-display text-3xl sm:text-5xl font-bold text-white">
+                        لماذا تختارنا؟
+                    </h1>
+                    <p class="text-gold-300 text-base sm:text-lg mt-2">
+                        مقومات التميز التي تجعل صالة حجر لازوردي الخيار الأول في مدينة مصراتة
+                    </p>
+                </div>
+            </div>
+
+            <!-- 6 Pillars Grid + Institutional Assurance Banner -->
+            <section class="py-16 sm:py-24 bg-arabesque-light">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                        <!-- Pillar 1 -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h2 class="font-display text-2xl font-bold text-lapis-900 mb-2">موقع متميز في مدينة مصراتة
+                            </h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                تقع الصالة في منطقة الرويسات على الدائري الرابع بجوار مصنع الصابون، مما يجعلها نقطة
+                                التقاء واضحة وميسرة لجميع الضيوف من داخل مصراتة وخارجها.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                                </svg>
+                            </div>
+                            <h2 class="font-display text-2xl font-bold text-lapis-900 mb-2">قاعة واسعة ومجهزة</h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                مساحات رحبة وتصميم داخلي أنيق مزود بأحدث أنظمة التكييف والإضاءة والصوتيات لاستيعاب
+                                الفعاليات الكبيرة والمتوسطة بأعلى درجات الراحة.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h2 class="font-display text-2xl font-bold text-lapis-900 mb-2">خدمات احترافية</h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                نلتزم بمعايير تنظيمية دقيقة تشمل تجهيز القاعة مسبقاً، الإشراف الفني أثناء الفعالية،
+                                وتنسيق الضيافة بما يليق بسمعة الجهة المنظمة أو العائلة.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 4 -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h2 class="font-display text-2xl font-bold text-lapis-900 mb-2">أسعار مناسبة</h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                خطط حجز مرنة وأسعار مدروسة تتناسب مع طبيعة المناسبة ومدتها، مع خيارات مخصصة للأفراد
+                                والمؤسسات التعليمية والرسمية.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 5 -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                                </svg>
+                            </div>
+                            <h2 class="font-display text-2xl font-bold text-lapis-900 mb-2">سهولة الوصول والمواقف</h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                بفضل الواجهة المباشرة على الدائري الرابع وتوفر مساحات رحبة لوقوف السيارات، ينعم ضيوفكم
+                                بوصول سلس ومريح دون عناء الازدحام.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 6 -->
+                        <div
+                            class="bg-white rounded-3xl p-8 border border-ivory-300 hover:border-gold-500 shadow-sm hover:shadow-lapis-card transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-lapis-900 text-gold-400 flex items-center justify-center mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h2 class="font-display text-2xl font-bold text-lapis-900 mb-2">فريق دعم وخدمة عملاء متعاون
+                            </h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                فريق استقبال وتنسيق متواجد للإجابة على جميع استفساراتكم، وتقديم المشورة اللازمة لترتيب
+                                القاعة وإنجاح فعاليتكم من البداية للنهاية.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Official CTA Banner -->
+                    <div
+                        class="rounded-3xl bg-lapis-900 text-white p-8 sm:p-12 border border-gold-500/40 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-lapis-card">
+                        <div class="text-center lg:text-right space-y-2">
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-gold-300">
+                                هل تخطط لإقامة مناسبة أو فعالية قريباً في مصراتة؟
+                            </h3>
+                            <p class="text-ivory-200 text-sm sm:text-base">
+                                احجز موعدك الآن أو تفضل بزيارتنا لمعاينة الصالة والتجهيزات على أرض الواقع.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
+                            <a href="#contact" data-page-link="contact"
+                                class="btn-gold-luxury text-lapis-950 font-extrabold px-8 py-4 rounded-2xl text-base shadow-gold-glow">
+                                احجز مناسبتك الآن
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 5: تواصل معنا والحجز (CONTACT & OFFICIAL BOOKING PAGE)       -->
+        <!-- ================================================================= -->
+        <div id="page-contact" class="page-view">
+            <!-- Official Sub-Page Header & Breadcrumb -->
+            <div class="bg-arabesque-dark text-white py-14 border-b border-gold-500/30">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav aria-label="مسار التنقل" class="flex items-center gap-2 text-xs sm:text-sm text-gold-300 mb-4">
+                        <a href="#home" data-page-link="home" class="hover:underline">الرئيسية</a>
+                        <span>/</span>
+                        <span class="text-white font-bold">تواصل معنا والحجز</span>
+                    </nav>
+                    <h1 class="font-display text-3xl sm:text-5xl font-bold text-white">
+                        معلومات التواصل والحجز الرسمي
+                    </h1>
+                    <p class="text-gold-300 text-base sm:text-lg mt-2">
+                        قنوات الاتصال المباشر ونموذج طلب حجز صالة شركة حجر لازوردي للاستثمار السياحي
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Directory + Official Reservation Form -->
+            <section class="py-16 sm:py-24 bg-arabesque-light">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+                        <!-- Right Column: Official Contact Information & Location Guide (5 Cols) -->
+                        <div class="lg:col-span-5 space-y-6">
+                            <div
+                                class="bg-lapis-900 text-white rounded-3xl p-8 shadow-lapis-card border border-gold-500/40 relative overflow-hidden">
+                                <span
+                                    class="inline-block px-3.5 py-1 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-300 text-xs font-bold mb-3">
+                                    قنوات التواصل الرسمية
+                                </span>
+                                <h2 class="font-display text-3xl font-bold text-white mb-6">
+                                    معلومات التواصل
+                                </h2>
+
+                                <div class="space-y-4">
+                                    <!-- Address -->
+                                    <div
+                                        class="flex items-start gap-4 p-4 rounded-2xl bg-lapis-800/70 border border-gold-500/20">
+                                        <div
+                                            class="w-11 h-11 shrink-0 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center mt-0.5">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="text-xs font-bold text-gold-400">العنوان الرسمي</div>
+                                            <p class="text-base font-bold text-white">مصراتة - ليبيا</p>
+                                            <p class="text-sm text-ivory-200">منطقة الرويسات - الدائري الرابع</p>
+                                            <p class="text-sm text-gold-300 font-semibold">بجوار مصنع الصابون</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div
+                                        class="flex items-center justify-between gap-3 p-4 rounded-2xl bg-lapis-800/70 border border-gold-500/20">
+                                        <div class="flex items-center gap-4">
+                                            <div
+                                                class="w-11 h-11 shrink-0 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div class="text-xs font-bold text-gold-400">الهاتف</div>
+                                                <a href="tel:0912112110" dir="ltr"
+                                                    class="text-lg font-extrabold text-white hover:text-gold-300 transition-colors">
+                                                    0912112110
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <button type="button"
+                                            onclick="copyToClipboard('0912112110', 'تم نسخ رقم الهاتف بنجاح')"
+                                            class="px-3 py-2 rounded-xl bg-lapis-950/80 hover:bg-gold-500 hover:text-lapis-950 text-gold-300 border border-gold-500/35 transition text-xs font-bold">
+                                            نسخ
+                                        </button>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div
+                                        class="flex items-center justify-between gap-3 p-4 rounded-2xl bg-lapis-800/70 border border-gold-500/20">
+                                        <div class="flex items-center gap-4 min-w-0">
+                                            <div
+                                                class="w-11 h-11 shrink-0 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                </svg>
+                                            </div>
+                                            <div class="min-w-0">
+                                                <div class="text-xs font-bold text-gold-400">البريد الإلكتروني</div>
+                                                <a href="mailto:lazurdhajar@gmail.com"
+                                                    class="text-sm sm:text-base font-bold text-white hover:text-gold-300 transition-colors truncate block">
+                                                    lazurdhajar@gmail.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <button type="button"
+                                            onclick="copyToClipboard('lazurdhajar@gmail.com', 'تم نسخ البريد الإلكتروني بنجاح')"
+                                            class="px-3 py-2 shrink-0 rounded-xl bg-lapis-950/80 hover:bg-gold-500 hover:text-lapis-950 text-gold-300 border border-gold-500/35 transition text-xs font-bold">
+                                            نسخ
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6 pt-6 border-t border-gold-500/20">
+                                    <a href="tel:0912112110"
+                                        class="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl btn-gold-luxury text-lapis-950 font-bold text-sm">
+                                        <span>اتصال مباشر</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Misrata Location Guide Card -->
+                            <div class="bg-white rounded-3xl p-6 border border-ivory-300 shadow-sm space-y-3">
+                                <h3 class="font-display text-xl font-bold text-lapis-900 flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-gold-500"></span>
+                                    <span>دليل الوصول إلى مقر الصالة</span>
+                                </h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    تقع صالة شركة حجر لازوردي للاستثمار السياحي في مدينة <strong>مصراتة</strong>،
+                                    تحديداً في <strong>منطقة الرويسات</strong> على طريق <strong>الدائري الرابع</strong>،
+                                    <strong>بجوار مصنع الصابون</strong>، مع توفر مساحات مخصصة لوقوف سيارات الضيوف.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Left Column: Official Event Booking Form (7 Cols) -->
+                        <div
+                            class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-lapis-card border border-ivory-300">
+                            <div class="pb-5 mb-6 border-b border-ivory-200">
+                                <h2 class="font-display text-2xl sm:text-3xl font-bold text-lapis-900">
+                                    نموذج طلب حجز أو استفسار
+                                </h2>
+                            </div>
+
+                            <form id="event-inquiry-form" class="space-y-5" novalidate>
+                                <!-- Applicant Category -->
+                                <div>
+                                    <label class="block text-sm font-bold text-lapis-900 mb-2">
+                                        صفة مقدم الطلب
+                                    </label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="applicantType" value="أفراد / مناسبة خاصة" checked
+                                                class="peer sr-only">
+                                            <div
+                                                class="p-3 rounded-xl border border-ivory-300 bg-ivory-100 peer-checked:bg-lapis-900 peer-checked:text-white peer-checked:border-lapis-900 text-center text-sm font-bold transition">
+                                                أفراد / مناسبة خاصة
+                                            </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="applicantType" value="مؤسسة / جهة رسمية"
+                                                class="peer sr-only">
+                                            <div
+                                                class="p-3 rounded-xl border border-ivory-300 bg-ivory-100 peer-checked:bg-lapis-900 peer-checked:text-white peer-checked:border-lapis-900 text-center text-sm font-bold transition">
+                                                مؤسسة / جهة رسمية
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <!-- Full Name -->
+                                    <div>
+                                        <label for="fullName" class="block text-sm font-bold text-lapis-900 mb-2">
+                                            الاسم الكامل أو اسم المؤسسة <span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="text" id="fullName" name="fullName" required
+                                            placeholder="أدخل الاسم الكامل"
+                                            class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm">
+                                    </div>
+
+                                    <!-- Phone Number -->
+                                    <div>
+                                        <label for="phone" class="block text-sm font-bold text-lapis-900 mb-2">
+                                            رقم الهاتف للتواصل <span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="tel" id="phone" name="phone" required
+                                            placeholder="مثال: 091XXXXXXX" dir="ltr"
+                                            class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm text-right">
+                                    </div>
+                                </div>
+
+                                <!-- Email Address -->
+                                <div>
+                                    <label for="email" class="block text-sm font-bold text-lapis-900 mb-2">
+                                        البريد الإلكتروني للتواصل
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="example@domain.com"
+                                        dir="ltr"
+                                        class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm text-right">
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <!-- Event Type -->
+                                    <div>
+                                        <label for="eventType" class="block text-sm font-bold text-lapis-900 mb-2">
+                                            نوع المناسبة أو الفعالية <span class="text-red-500">*</span>
+                                        </label>
+                                        <select id="eventType" name="eventType" required
+                                            class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm">
+                                            <option value="حفلات ومناسبات اجتماعية">حفلات ومناسبات اجتماعية (زفاف /
+                                                خطوبة)</option>
+                                            <option value="حفلات التخرج">حفلات التخرج</option>
+                                            <option value="المؤتمرات والملتقيات">المؤتمرات والملتقيات</option>
+                                            <option value="المحاضرات الثقافية">المحاضرات الثقافية</option>
+                                            <option value="الندوات وورش العمل">الندوات وورش العمل</option>
+                                            <option value="فعالية أخرى">فعالية أخرى</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Preferred Date -->
+                                    <div>
+                                        <label for="eventDate" class="block text-sm font-bold text-lapis-900 mb-2">
+                                            التاريخ المقترح
+                                        </label>
+                                        <input type="date" id="eventDate" name="eventDate"
+                                            class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <!-- Expected Guests -->
+                                    <div>
+                                        <label for="guestCount" class="block text-sm font-bold text-lapis-900 mb-2">
+                                            العدد التقديري للحضور
+                                        </label>
+                                        <select id="guestCount" name="guestCount"
+                                            class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm">
+                                            <option value="أقل من 100 ضيف">أقل من 100 ضيف</option>
+                                            <option value="100 - 250 ضيف" selected>100 - 250 ضيف</option>
+                                            <option value="250 - 400 ضيف">250 - 400 ضيف</option>
+                                            <option value="أكثر من 400 ضيف">أكثر من 400 ضيف</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Time Period -->
+                                    <div>
+                                        <label for="eventPeriod" class="block text-sm font-bold text-lapis-900 mb-2">
+                                            الفترة المفضلة
+                                        </label>
+                                        <select id="eventPeriod" name="eventPeriod"
+                                            class="w-full px-4 py-3.5 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm">
+                                            <option value="الفترة المسائية">الفترة المسائية</option>
+                                            <option value="الفترة الصباحية">الفترة الصباحية</option>
+                                            <option value="يوم كامل">يوم كامل</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Notes -->
+                                <div>
+                                    <label for="notes" class="block text-sm font-bold text-lapis-900 mb-2">
+                                        تفاصيل ومتطلبات إضافية
+                                    </label>
+                                    <textarea id="notes" name="notes" rows="3"
+                                        placeholder="اذكر أي متطلبات خاصة بالتجهيزات الصوتية، الضيافة، أو ترتيب القاعة..."
+                                        class="w-full px-4 py-3 rounded-xl bg-ivory-100 border border-ivory-300 focus:border-gold-500 focus:bg-white focus:ring-2 focus:ring-gold-500/20 outline-none transition text-sm resize-none"></textarea>
+                                </div>
+
+                                <!-- Validation Error Box -->
+                                <div id="form-error"
+                                    class="hidden p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm font-semibold">
+                                </div>
+
+                                <!-- Submit Actions -->
+                                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                                    <button type="submit" id="submit-booking-btn"
+                                        class="flex-1 btn-gold-luxury text-lapis-950 font-extrabold py-4 px-6 rounded-xl text-base shadow-md flex items-center justify-center gap-2">
+                                        <span>إرسال طلب الحجز</span>
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- OFFICIAL CORPORATE FOOTER                                             -->
+    <!-- ===================================================================== -->
+    <footer class="bg-lapis-950 text-ivory-200 border-t border-gold-500/30 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-gold-500/20">
+
+                <!-- Brand Summary -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-xl bg-lapis-800 border border-gold-500/50 overflow-hidden">
+                            <img src="hajar-lazorde-logo.webp" alt="شعار شركة حجر لازوردي"
+                                class="w-full h-full object-cover object-center rounded-xl">
+                        </div>
+                        <div>
+                            <div class="font-display text-xl font-bold text-white">شركة حجر لازوردي</div>
+                            <div class="text-xs text-gold-400">للاستثمار السياحي • مصراتة</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-ivory-200/75 leading-relaxed">
+                        وجهتكم المثالية للمناسبات والاحتفالات المميزة، المؤتمرات، المحاضرات الثقافية والندوات في مدينة
+                        مصراتة.
+                    </p>
+                </div>
+
+                <!-- Multi-Page Directory Links -->
+                <div>
+                    <h4 class="font-display text-xl font-bold text-gold-300 mb-4">صفحات الموقع</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" data-page-link="home"
+                                class="hover:text-gold-400 transition-colors">الرئيسية</a></li>
+                        <li><a href="#about" data-page-link="about" class="hover:text-gold-400 transition-colors">من
+                                نحن</a></li>
+                        <li><a href="#services" data-page-link="services"
+                                class="hover:text-gold-400 transition-colors">خدماتنا</a></li>
+                        <li><a href="#why-us" data-page-link="why-us"
+                                class="hover:text-gold-400 transition-colors">لماذا تختارنا؟</a></li>
+                        <li><a href="#contact" data-page-link="contact"
+                                class="hover:text-gold-400 transition-colors">تواصل معنا والحجز</a></li>
+                    </ul>
+                </div>
+
+                <!-- Official Contact Details -->
+                <div>
+                    <h4 class="font-display text-xl font-bold text-gold-300 mb-4">بيانات التواصل الرسمية</h4>
+                    <ul class="space-y-3 text-sm text-ivory-200/85">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-gold-400">📍</span>
+                            <span>مصراتة - ليبيا، منطقة الرويسات - الدائري الرابع، بجوار مصنع الصابون</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="text-gold-400">📞</span>
+                            <a href="tel:0912112110" dir="ltr" class="hover:text-gold-400 font-bold">0912112110</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="text-gold-400">✉️</span>
+                            <a href="mailto:lazurdhajar@gmail.com" class="hover:text-gold-400">lazurdhajar@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory-200/60">
+                <p>© <span id="current-year"></span> شركة حجر لازوردي للاستثمار السياحي. جميع الحقوق محفوظة.</p>
+                <p>مصراتة - ليبيا</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Toast Notification -->
+    <div id="toast-notification"
+        class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div
+            class="bg-lapis-900 text-white border border-gold-500/50 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-gold-400"></span>
+            <span id="toast-message" class="text-sm font-bold">تم النسخ بنجاح</span>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- MULTI-PAGE ROUTER & INTERACTIVE LOGIC                                 -->
+    <!-- ===================================================================== -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Multi-Page Route Definitions & Page Titles
+        const pageTitles = {
+            'home': 'شركة حجر لازوردي للاستثمار السياحي | الرئيسية - مصراتة',
+            'about': 'من نحن | شركة حجر لازوردي للاستثمار السياحي',
+            'services': 'خدماتنا | شركة حجر لازوردي للاستثمار السياحي',
+            'why-us': 'لماذا تختارنا؟ | شركة حجر لازوردي للاستثمار السياحي',
+            'contact': 'تواصل معنا والحجز | شركة حجر لازوردي للاستثمار السياحي'
+        };
+
+        // Core Multi-Page Navigation Function
+        function navigateToPage(pageId, updateHash = true) {
+            const validPage = pageTitles[pageId] ? pageId : 'home';
+
+            // Hide all pages and activate the target page
+            document.querySelectorAll('.page-view').forEach(section => {
+                section.classList.remove('active-page');
+            });
+            const targetSection = document.getElementById('page-' + validPage);
+            if (targetSection) {
+                targetSection.classList.add('active-page');
+            }
+
+            // Update active state on all navigation links
+            document.querySelectorAll('[data-page-link]').forEach(link => {
+                const isMatch = link.getAttribute('data-page-link') === validPage;
+                if (link.classList.contains('nav-link-item')) {
+                    link.classList.toggle('active', isMatch);
+                }
+                if (link.classList.contains('mobile-nav-link')) {
+                    link.classList.toggle('bg-lapis-800', isMatch);
+                    link.classList.toggle('text-gold-400', isMatch);
+                }
+            });
+
+            // Update browser document title
+            document.title = pageTitles[validPage];
+
+            // Sync URL hash for browser back/forward support
+            if (updateHash && window.location.hash !== '#' + validPage) {
+                history.pushState({ page: validPage }, '', '#' + validPage);
+            }
+
+            // Scroll smoothly to top of the newly opened page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Attach click listeners to all multi-page links
+        document.querySelectorAll('[data-page-link]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetPage = this.getAttribute('data-page-link');
+                navigateToPage(targetPage, true);
+            });
+        });
+
+        // Handle browser Back/Forward buttons
+        window.addEventListener('popstate', () => {
+            const hashPage = window.location.hash.replace('#', '') || 'home';
+            navigateToPage(hashPage, false);
+        });
+
+        // Initialize page based on initial URL hash on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const initialHash = window.location.hash.replace('#', '') || 'home';
+            navigateToPage(initialHash, false);
+        });
+
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden', !isHidden);
+            menuIconClose.classList.toggle('hidden', isHidden);
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+
+        // Navigate from Services Page directly to Contact/Booking Page with Service Pre-selected
+        function bookSpecificService(serviceName) {
+            const selectEl = document.getElementById('eventType');
+            if (selectEl) {
+                selectEl.value = serviceName;
+            }
+            navigateToPage('contact', true);
+            setTimeout(() => {
+                const nameInput = document.getElementById('fullName');
+                if (nameInput) nameInput.focus();
+            }, 350);
+        }
+
+        // Toast Notification Helper
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        // Safe Clipboard Copy
+        function copyToClipboard(text, successMessage) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(successMessage);
+            } catch (err) {
+                showToast('تعذر النسخ تلقائياً: ' + text);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // Booking Form Validation & Local Reset (No External Submission or Confirmation View)
+        const inquiryForm = document.getElementById('event-inquiry-form');
+        const formError = document.getElementById('form-error');
+
+        inquiryForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const fullName = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            if (!fullName || !phone) {
+                formError.textContent = 'يرجى إدخال الاسم الكامل ورقم الهاتف لإتمام تسجيل الطلب.';
+                formError.classList.remove('hidden');
+                return;
+            }
+
+            formError.classList.add('hidden');
+            inquiryForm.reset();
+        });
+
+        // Ambient Golden Shimmer Canvas in Home Hero
+        window.addEventListener('load', () => {
+            const canvas = document.getElementById('lapis-particles');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth || window.innerWidth;
+                canvas.height = canvas.offsetHeight || 600;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const particleCount = Math.min(40, Math.floor(window.innerWidth / 28));
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 0.6,
+                    speedY: -(Math.random() * 0.35 + 0.12),
+                    speedX: (Math.random() - 0.5) * 0.25,
+                    alpha: Math.random() * 0.6 + 0.2
+                });
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.y += p.speedY;
+                    p.x += p.speedX;
+                    if (p.y < -10) {
+                        p.y = canvas.height + 10;
+                        p.x = Math.random() * canvas.width;
+                    }
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(229, 199, 123, ${p.alpha})`;
+                    ctx.fill();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
+        });
+    </script>
+</body>
+
+</html>
